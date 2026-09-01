@@ -116,6 +116,15 @@ export const PUBLICATIONS: Publication[] = [
     links: [{ label: "GitHub", href: "https://github.com/sslim-aidrug/SJoINT" }],
   },
   {
+    type: "registration",
+    year: "2025",
+    authors: `Lim S., ${ME}, Lee Y., Lee M.`,
+    title:
+      "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
+    venue:
+      "Software Registration No. C-2025-040207, Korea Copyright Commission · Registered Oct 1, 2025",
+  },
+  {
     type: "conference",
     year: "2025",
     authors: `${ME}‡, Lee Y.‡, Lee M., Lim S.*`,
@@ -140,15 +149,6 @@ export const PUBLICATIONS: Publication[] = [
         award: "🎉 Best Paper Award",
       },
     ],
-  },
-  {
-    type: "registration",
-    year: "2025",
-    authors: `Lim S., ${ME}, Lee Y., Lee M.`,
-    title:
-      "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
-    venue:
-      "Software Registration No. C-2025-040207, Korea Copyright Commission · Registered Oct 1, 2025",
   },
 ];
 
