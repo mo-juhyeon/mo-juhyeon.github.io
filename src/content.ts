@@ -195,8 +195,7 @@ export const VITAE: VitaeSection[] = [
     heading: "Education",
     items: [
       {
-        // TODO: fill in the enrollment period, e.g. "2021–2027".
-        period: "",
+        period: "2023–Present",
         title: "B.S. in Computer Science and Artificial Intelligence",
         detail: "Dongguk University, Seoul, Korea",
       },
@@ -262,6 +261,23 @@ export const VITAE: VitaeSection[] = [
         title: "Software Program Registration (approved)",
         detail:
           "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies, Korea Copyright Commission",
+      },
+    ],
+  },
+  {
+    heading: "Certifications",
+    items: [
+      {
+        // TODO: add the year the badge was issued.
+        period: "",
+        title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+        detail: "Microsoft",
+        links: [
+          {
+            label: "Verify",
+            href: "https://www.credly.com/badges/427c7583-43b2-4ab1-9934-015369e82b29/public_url",
+          },
+        ],
       },
     ],
   },
