@@ -371,12 +371,12 @@ export const VITAE: VitaeSection[] = [
     heading: "Technical Skills",
     items: [
       { period: "", title: "Programming Languages", detail: "Python, R, C, Java" },
-      { period: "", title: "Data Handling", detail: "NumPy, Pandas, scikit-learn" },
+      { period: "", title: "Data Handling", detail: "NumPy, Pandas, Scikit-learn" },
       {
         period: "",
-        title: "Machine Learning & Deep Learning",
+        title: "Machine Learning & Deep Learning Frameworks",
         detail:
-          "PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric (PyG), Deep Graph Library (DGL)",
+          "PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric (PyG), DGL (Deep Graph Library)",
       },
       {
         period: "",
