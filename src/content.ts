@@ -171,8 +171,12 @@ export const NEWS: NewsItem[] = [
     },
   },
   {
+    date: "Jun 23, 2026",
+    text: "🚀 Selected as the team to build and demonstrate our chatbot maintenance system at Seoul Metro, running through December 2026.",
+  },
+  {
     date: "Jun 12, 2026",
-    text: "🚀 Completed a WE-Meet undergraduate industry project with Seoul Metro: automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries.",
+    text: "✅ Completed the WE-Meet undergraduate industry project: automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries.",
   },
   {
     date: "Jul 2025",
@@ -250,6 +254,12 @@ export const VITAE: VitaeSection[] = [
         title: "Undergraduate Researcher, PRISM Lab",
         detail:
           "Dongguk University, Seoul, Korea (Advisor: Dr. Sangsoo Lim)",
+      },
+      {
+        period: "Jun–Dec 2026",
+        title: "Industry Deployment Project, Seoul Metro",
+        detail:
+          "Selected in June 2026 as the team to build and demonstrate the system at Seoul Metro, extending the WE-Meet project below",
       },
       {
         period: "Apr–Jun 2026",
