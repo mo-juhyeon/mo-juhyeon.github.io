@@ -63,8 +63,7 @@ export type Publication = {
   title: string;
   venue: string;
   status?: string;
-  doi?: string;
-  github?: string;
+  links?: { label: string; href: string }[];
   award?: string;
   awardDetail?: string;
   abstract?: string;
@@ -76,7 +75,10 @@ export const ME = "Mo J.";
 
 /** Footnote for the asterisk in author lists. */
 export const PUBLICATIONS_NOTE =
-  "* Corresponding author. Underlined name indicates the author of this site.";
+  "‡ Equal contribution.  * Corresponding author.  Underlined name indicates the author of this site.";
+
+/** Google Drive file viewer link. */
+const drive = (id: string) => `https://drive.google.com/file/d/${id}/view`;
 
 export const PUBLICATIONS: Publication[] = [
   {
@@ -87,7 +89,11 @@ export const PUBLICATIONS: Publication[] = [
       "Cross-view molecular graph learning enables interpretable ADMET prediction",
     venue: "Bioinformatics",
     status: "Under editorial review · Sole first author",
-    github: "https://github.com/sslim-aidrug/MAGNET",
+    links: [
+      { label: "PDF", href: drive("14_F8Qwds56z4IypPNg8GepRD24KA0SOt") },
+      { label: "Supplementary", href: drive("1Jq_iEfOPuus_eim10bTePfJuX-rAqW99") },
+      { label: "GitHub", href: "https://github.com/sslim-aidrug/MAGNET" },
+    ],
     abstract:
       "Motivation: Accurate and interpretable ADMET prediction remains challenging because molecular properties arise from structural features across multiple scales. We introduce MAGNET, a cross-view molecular graph learning framework that represents molecules as meta-graphs constructed from complementary BRICS, Junction Tree and Murcko scaffold decompositions. By connecting overlapping fragments across views, MAGNET enables message passing between chemically distinct but structurally related substructures. Multi-objective pre-training further aligns graph representations with molecular descriptors and chemical language model embeddings. " +
       "Results: Across 10 ADMET benchmarks, MAGNET achieved the best performance on seven tasks and the strongest overall rank against fifteen baseline models. MAGNET also identifies cross-view consensus fragments that receive enriched attention, dominate perturbation-based attribution, and recover known structure–activity relationships, permeability determinants, BACE substituent effects and polarity-dependent solvation behavior. These results establish cross-view consensus as a practical principle for interpretable molecular representation learning.",
@@ -100,12 +106,12 @@ export const PUBLICATIONS: Publication[] = [
       "SJoINT: Substructure-Driven Junction Tree for Interpretable ADMET Prediction",
     venue: "Manuscript in preparation",
     status: "Co-author · Submission planned for September 2026",
-    github: "https://github.com/sslim-aidrug/SJoINT",
+    links: [{ label: "GitHub", href: "https://github.com/sslim-aidrug/SJoINT" }],
   },
   {
     type: "conference",
     year: "2025",
-    authors: `${ME}, Lee Y., Lee M., Lim S.*`,
+    authors: `${ME}‡, Lee Y.‡, Lee M., Lim S.*`,
     title:
       "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
     venue:
@@ -114,14 +120,19 @@ export const PUBLICATIONS: Publication[] = [
     award: "BEST PAPER AWARD",
     awardDetail:
       "Best Paper Award, Undergraduate Division, Undergraduate/Junior Paper Competition, Korea Computer Congress (KCC) 2025 (awarded Jul 30, 2025).",
+    links: [
+      { label: "Paper", href: drive("1YUXyhn8TRT2TmWwAlZtMOIGjYEZwSQxF") },
+      { label: "Poster", href: drive("1Ojhni21QtqcRPqGK_xYR2jjWHXJKULMo") },
+      { label: "Certificate", href: drive("1GcobzciQs5A5paxltuP1uiGskujrh9e3") },
+      { label: "GitHub", href: "https://github.com/sslim-aidrug/MAGNET" },
+    ],
     presentations: [
       {
         date: "Jul 2025",
-        text: "Presented at the Undergraduate/Junior Paper Competition, KCC 2025, Korea.",
+        text: "Poster presentation at the Undergraduate/Junior Paper Competition, KCC 2025, Korea.",
         award: "🎉 Best Paper Award",
       },
     ],
-    github: "https://github.com/sslim-aidrug/MAGNET",
   },
   {
     type: "registration",
@@ -152,16 +163,16 @@ export const NEWS: NewsItem[] = [
     },
   },
   {
-    date: "Jun 27, 2026",
-    text: "✈️ Started a one-month overseas research training program at the University of Sheffield, UK (Jun 27 – Jul 24, 2026).",
+    date: "Jun 29, 2026",
+    text: "✈️ Started a month-long summer school programme at The Sheffield College, UK (Jun 29 – Jul 24, 2026).",
     link: {
-      label: "University of Sheffield",
-      href: "https://www.sheffield.ac.uk/",
+      label: "The Sheffield College",
+      href: "https://www.sheffcol.ac.uk/",
     },
   },
   {
-    date: "Jun 23, 2026",
-    text: "🚀 Selected for an industry collaboration project with Seoul Metro: automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries.",
+    date: "Jun 12, 2026",
+    text: "🚀 Completed a WE-Meet undergraduate industry project with Seoul Metro: automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries.",
   },
   {
     date: "Jul 2025",
@@ -220,6 +231,15 @@ export const VITAE: VitaeSection[] = [
         title: "B.S. in Computer Science and Artificial Intelligence",
         detail: "Dongguk University, Seoul, Korea",
       },
+      {
+        period: "Jun–Jul 2026",
+        title: "Summer School Programme",
+        detail:
+          "The Sheffield College, Sheffield, United Kingdom · English language, communication and teamwork, digital literacy, and project-based learning (Jun 29 – Jul 24, 2026)",
+        links: [
+          { label: "Certificate", href: drive("1Pf05TWZgTA2ks5NeGUE2XPA-wg4OdriZ") },
+        ],
+      },
     ],
   },
   {
@@ -232,15 +252,13 @@ export const VITAE: VitaeSection[] = [
           "Dongguk University, Seoul, Korea (Advisor: Dr. Sangsoo Lim)",
       },
       {
-        period: "Jun–Jul 2026",
-        title: "Overseas Research Training Program",
-        detail: "University of Sheffield, Sheffield, United Kingdom",
-      },
-      {
-        period: "Jun 2026–Present",
-        title: "Industry Collaboration Project, Seoul Metro",
+        period: "Apr–Jun 2026",
+        title: "WE-Meet Undergraduate Industry Project",
         detail:
-          "Automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries",
+          "Convergence and Open Sharing System, National Research Foundation of Korea · Automated maintenance of rule-based chatbot training data through AI-driven analysis of unanswered queries, in collaboration with Seoul Metro",
+        links: [
+          { label: "Certificate", href: drive("17cnkOyzF7J8oFuulo06r3yhPxFyJh-X5") },
+        ],
       },
     ],
   },
@@ -252,6 +270,9 @@ export const VITAE: VitaeSection[] = [
         title: "Best Paper Award, Undergraduate Division",
         detail:
           "Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers (KIISE), Korea",
+        links: [
+          { label: "Certificate", href: drive("1GcobzciQs5A5paxltuP1uiGskujrh9e3") },
+        ],
       },
       {
         period: "2024",
@@ -269,7 +290,11 @@ export const VITAE: VitaeSection[] = [
       {
         period: "2024",
         title: "Encouragement Award, SNS Promotion Division",
-        detail: "World Friends Korea ICT Volunteers, Korea",
+        detail:
+          "World Friends Korea ICT Volunteers, National Information Society Agency (NIA), Korea · Team FLY HAI",
+        links: [
+          { label: "Certificate", href: drive("1B7guWzCGqS57hh7oibFOkE3pLeFqXJQ1") },
+        ],
       },
     ],
   },

@@ -58,6 +58,20 @@ function renderNewsText(item: NewsItem) {
   );
 }
 
+/** A small outlined button linking to a document or repository. */
+function LinkButton({ label, href }: { label: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
+    >
+      {label}
+    </a>
+  );
+}
+
 /** Author list with the site owner's name emphasised. */
 function AuthorList({ authors }: { authors: string }) {
   const parts = authors.split(", ");
@@ -218,7 +232,7 @@ function PublicationsSection({
               <p className="mt-0.5 text-xs font-mono text-muted-foreground">{pub.status}</p>
             )}
 
-            <div className="flex items-center gap-2 mt-3">
+            <div className="flex flex-wrap items-center gap-2 mt-3">
               {pub.award && (
                 <button
                   onClick={() => toggleAwardDetail(i)}
@@ -227,26 +241,9 @@ function PublicationsSection({
                   {pub.award} {showAwardDetail[i] ? "▼" : "▶"}
                 </button>
               )}
-              {pub.doi && (
-                <a
-                  href={pub.doi}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
-                >
-                  DOI
-                </a>
-              )}
-              {pub.github && (
-                <a
-                  href={pub.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
-                >
-                  GitHub
-                </a>
-              )}
+              {pub.links?.map((link) => (
+                <LinkButton key={link.label} {...link} />
+              ))}
             </div>
 
             {pub.awardDetail && showAwardDetail[i] && (
@@ -275,15 +272,7 @@ function VitaeEntry({ item }: { item: VitaeItem }) {
         {item.links && (
           <div className="flex flex-wrap items-center gap-2 mt-2">
             {item.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
-              >
-                {link.label}
-              </a>
+              <LinkButton key={link.label} {...link} />
             ))}
           </div>
         )}
@@ -399,28 +388,21 @@ function PublicationDetailSection({ publication }: { publication: Publication | 
         </div>
       )}
 
-      <div className="flex gap-4 mt-8">
-        {publication.doi && (
-          <a
-            href={publication.doi}
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-2 border border-border hover:bg-accent hover:text-white transition-colors text-sm font-sans rounded"
-          >
-            Paper (DOI)
-          </a>
-        )}
-        {publication.github && (
-          <a
-            href={publication.github}
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-2 border border-border hover:bg-accent hover:text-white transition-colors text-sm font-sans rounded"
-          >
-            GitHub
-          </a>
-        )}
-      </div>
+      {publication.links && (
+        <div className="flex flex-wrap gap-3 mt-8">
+          {publication.links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2 border border-border hover:bg-accent hover:text-white transition-colors text-sm font-sans rounded"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
