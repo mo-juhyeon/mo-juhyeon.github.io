@@ -194,6 +194,10 @@ export const NEWS: NewsItem[] = [
     },
   },
   {
+    date: "Nov 24, 2024",
+    text: "🎉 Our team received an Encouragement Award from World Friends Korea for our ICT volunteering, in the SNS promotion division.",
+  },
+  {
     date: "Aug 23, 2024",
     text: "🔬 Began my research journey at PRISM Lab, Dongguk University.",
   },
@@ -204,6 +208,10 @@ export const NEWS: NewsItem[] = [
       label: "Smilegate AI Service Weekly-thon",
       href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
     },
+  },
+  {
+    date: "Apr 2024",
+    text: "🌍 Started seven months of ICT education volunteering with Ukrainian students through World Friends Korea (Apr – Oct 2024).",
   },
 ];
 
@@ -278,6 +286,17 @@ export const VITAE: VitaeSection[] = [
         links: [
           { label: "Certificate", href: drive("17cnkOyzF7J8oFuulo06r3yhPxFyJh-X5") },
         ],
+      },
+    ],
+  },
+  {
+    heading: "Teaching & Outreach",
+    items: [
+      {
+        period: "Apr–Oct 2024",
+        title: "ICT Education Volunteer, World Friends Korea",
+        detail:
+          "Taught ICT to Ukrainian students over seven months · National Information Society Agency (NIA), Korea · Team FLY HAI",
       },
     ],
   },
