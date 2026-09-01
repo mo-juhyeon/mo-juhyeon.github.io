@@ -188,14 +188,16 @@ function PublicationsSection({
         >
           <span className="font-mono text-xs text-muted-foreground pt-0.5">{pub.year}</span>
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <AuthorList authors={pub.authors} />
-              {pub.type === "registration" && (
-                <span className="px-1.5 py-0.5 bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400 text-xs font-sans rounded">
-                  SW REG.
-                </span>
-              )}
-            </div>
+            {(pub.authors || pub.type === "registration") && (
+              <div className="flex items-center gap-2 mb-1">
+                {pub.authors && <AuthorList authors={pub.authors} />}
+                {pub.type === "registration" && (
+                  <span className="px-1.5 py-0.5 bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400 text-xs font-sans rounded">
+                    SW REG.
+                  </span>
+                )}
+              </div>
+            )}
 
             {onPublicationClick ? (
               <button
@@ -345,7 +347,7 @@ function PublicationDetailSection({ publication }: { publication: Publication | 
         <h1 className="font-garamond text-3xl md:text-4xl text-foreground mb-4 leading-tight">
           {publication.title}
         </h1>
-        <AuthorList authors={publication.authors} />
+        {publication.authors && <AuthorList authors={publication.authors} />}
         <p className="mt-2 text-sm font-mono text-muted-foreground italic">{publication.venue}</p>
         {publication.status && (
           <p className="mt-1 text-sm font-mono text-muted-foreground">{publication.status}</p>
