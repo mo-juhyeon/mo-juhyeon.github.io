@@ -31,8 +31,6 @@ npm run build    # dist/ 생성
 src/
 ├── content.ts               # ← CV 내용 전부
 ├── main.tsx
-├── app/
-│   ├── App.tsx              # 레이아웃 및 섹션 렌더링
-│   └── components/ImageWithFallback.tsx
+├── app/App.tsx              # 레이아웃 및 섹션 렌더링
 └── styles/index.css         # 디자인 시스템 (색상 토큰, 레이아웃)
 ```
