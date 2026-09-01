@@ -10,10 +10,14 @@
 export const PROFILE = {
   firstName: "Juhyeon",
   lastName: "Mo",
+  nameKo: "모주현",
+  headline:
+    "Molecular Representation Learning · AI for Drug Discovery · Explainable AI",
   tagline: "B.S. in Computer Science & Artificial Intelligence",
   affiliation: "Undergraduate Researcher",
-  labName: "@PRISM Lab",
+  labName: "PRISM Lab",
   labUrl: "http://sangsoolim.notion.site",
+  location: "Seoul, South Korea",
   university: "Dongguk University",
   email: "ahwngus2436@gmail.com",
   github: "https://github.com/mo-juhyeon",
@@ -22,6 +26,9 @@ export const PROFILE = {
   // TODO: replace with the Google Drive link once the PDF is ready.
   cvPdf: "",
 };
+
+export const CONTACT_INTRO =
+  "I'm always happy to connect with researchers, students, and mentors. Feel free to reach out through any of the channels below.";
 
 export const ABOUT_PARAGRAPHS = [
   `I am an undergraduate researcher in the Department of Computer Science and
@@ -210,6 +217,7 @@ export type VitaeItem = {
 };
 export type VitaeSection =
   | { heading: string; items: VitaeItem[] }
+  | { heading: string; keywords: string[] }
   | {
       heading: string;
       subsections: { subheading: string; items: VitaeItem[] }[];
@@ -218,13 +226,12 @@ export type VitaeSection =
 export const VITAE: VitaeSection[] = [
   {
     heading: "Research Interests",
-    items: [
-      {
-        period: "",
-        title:
-          "Molecular Representation Learning · AI for Drug Discovery · Explainable AI",
-        detail: "",
-      },
+    keywords: [
+      "Molecular Representation Learning",
+      "AI for Drug Discovery",
+      "Explainable AI",
+      "Graph Neural Networks",
+      "ADMET Prediction",
     ],
   },
   {

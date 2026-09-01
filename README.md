@@ -1,6 +1,6 @@
 # mo-juhyeon.github.io
 
-Juhyeon Mo의 개인 학술 홈페이지. Vite + React + Tailwind CSS v4로 만든 단일 페이지 사이트이며,
+Juhyeon Mo의 개인 학술 홈페이지. Vite + React로 만든 단일 페이지 사이트이며,
 GitHub Actions로 GitHub Pages에 자동 배포됩니다.
 
 ## 내용 수정
@@ -34,5 +34,5 @@ src/
 ├── app/
 │   ├── App.tsx              # 레이아웃 및 섹션 렌더링
 │   └── components/ImageWithFallback.tsx
-└── styles/                  # 폰트, Tailwind, 색상 토큰
+└── styles/index.css         # 디자인 시스템 (색상 토큰, 레이아웃)
 ```

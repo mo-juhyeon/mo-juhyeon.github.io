@@ -1,26 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Juhyeon Mo</title>
     <meta
       name="description"
-      content="Juhyeon Mo — undergraduate researcher in molecular representation learning, AI for drug discovery, and explainable AI."
+      content="Juhyeon Mo (모주현) — undergraduate researcher at PRISM Lab, Dongguk University. Research on molecular representation learning, AI for drug discovery, and explainable AI."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Juhyeon Mo</title>
     <style>
       html,
       body {
         height: 100%;
         margin: 0;
       }
-      #root {
-        height: 100%;
-      }
     </style>
+    <script>
+      // Set the theme before first paint to avoid a flash of the wrong palette.
+      ;(function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (t !== 'light' && t !== 'dark') {
+            t =
+              window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', t)
+        } catch (e) {}
+      })()
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
