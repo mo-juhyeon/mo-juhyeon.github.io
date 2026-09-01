@@ -409,8 +409,8 @@ main {
 .about-head { display: flow-root; }
 .portrait {
   display: block;
-  width: 155px;
-  max-width: 45vw;
+  width: 125px;
+  max-width: 38vw;
   margin: 14px 0;
   border: 1px solid var(--border);
   filter: grayscale(15%);
@@ -420,7 +420,7 @@ main {
 @media (min-width: 768px) {
   /* Photo floats to the right, starting just under the keyword line;
      standing / location / links / intro wrap beside it. */
-  .portrait { float: right; width: 185px; margin: 30px 0 14px 32px; }
+  .portrait { float: right; width: 150px; margin: 28px 0 14px 28px; }
 }
 .portrait-fallback {
   display: grid;
