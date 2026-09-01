@@ -241,7 +241,7 @@ function PublicationsSection({
                   rel="noreferrer"
                   className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
                 >
-                  CODE
+                  GitHub
                 </a>
               )}
             </div>

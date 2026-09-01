@@ -241,7 +241,7 @@ export const VITAE: VitaeSection[] = [
             label: "Announcement",
             href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
           },
-          { label: "Code", href: "https://github.com/mo-juhyeon/AIStoryWeaver" },
+          { label: "GitHub", href: "https://github.com/mo-juhyeon/AIStoryWeaver" },
         ],
       },
       {
