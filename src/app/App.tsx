@@ -4,6 +4,7 @@ import {
   PROFILE,
   ABOUT_PARAGRAPHS,
   PUBLICATIONS,
+  PUBLICATIONS_NOTE,
   NEWS,
   VITAE,
   ME,
@@ -256,6 +257,8 @@ function PublicationsSection({
           </div>
         </div>
       ))}
+
+      <p className="text-xs font-sans text-muted-foreground pt-1">{PUBLICATIONS_NOTE}</p>
     </div>
   );
 }

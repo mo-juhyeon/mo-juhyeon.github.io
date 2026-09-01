@@ -74,11 +74,15 @@ export type Publication = {
 /** Author name rendered in bold + underline wherever it appears. */
 export const ME = "Mo J.";
 
+/** Footnote for the asterisk in author lists. */
+export const PUBLICATIONS_NOTE =
+  "* Corresponding author. Underlined name indicates the author of this site.";
+
 export const PUBLICATIONS: Publication[] = [
   {
     type: "paper",
     year: "2026",
-    authors: `${ME}, Lee M., Lee S., Lim S.`,
+    authors: `${ME}, Lee M., Lee S., Lim S.*`,
     title:
       "Cross-view molecular graph learning enables interpretable ADMET prediction",
     venue: "Bioinformatics",
@@ -91,7 +95,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     type: "paper",
     year: "2026",
-    authors: `Lee M., ${ME}, Kang M., Lim S.`,
+    authors: `Lee M., ${ME}, Kang M., Lim S.*`,
     title:
       "SJoINT: Substructure-Driven Junction Tree for Interpretable ADMET Prediction",
     venue: "Manuscript in preparation",
@@ -101,7 +105,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     type: "conference",
     year: "2025",
-    authors: `${ME}, Lee Y., Lee M., Lim S.`,
+    authors: `${ME}, Lee Y., Lee M., Lim S.*`,
     title:
       "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
     venue:
@@ -110,6 +114,13 @@ export const PUBLICATIONS: Publication[] = [
     award: "BEST PAPER AWARD",
     awardDetail:
       "Best Paper Award, Undergraduate Division, Undergraduate/Junior Paper Competition, Korea Computer Congress (KCC) 2025 (awarded Jul 30, 2025).",
+    presentations: [
+      {
+        date: "Jul 2025",
+        text: "Presented at the Undergraduate/Junior Paper Competition, KCC 2025, Korea.",
+        award: "🎉 Best Paper Award",
+      },
+    ],
     github: "https://github.com/sslim-aidrug/MAGNET",
   },
   {
