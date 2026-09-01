@@ -287,15 +287,11 @@ function VitaeRow({ item }: { item: VitaeItem }) {
     <div className="row wide" id={slugId(item.title)}>
       <span className="row-date">{item.period}</span>
       <div>
-        {item.badge && (
-          <div className="tagrow" style={{ marginTop: 0, marginBottom: 6 }}>
-            <span className="badge">{item.badge}</span>
-          </div>
-        )}
         <p className="row-title">{item.title}</p>
         {item.detail && <p className="row-detail">{item.detail}</p>}
-        {item.links && (
+        {(item.badge || item.links) && (
           <div className="tagrow" style={{ marginTop: 8 }}>
+            {item.badge && <span className="badge">{item.badge}</span>}
             <ChipLinks links={item.links} />
           </div>
         )}
