@@ -368,17 +368,21 @@ export const VITAE: VitaeSection[] = [
     ],
   },
   {
-    // TODO: confirm or edit — drafted from the tooling used in your projects.
     heading: "Technical Skills",
     items: [
-      { period: "", title: "Programming", detail: "Python, C/C++, Java, SQL" },
+      { period: "", title: "Programming Languages", detail: "Python, R, C, Java" },
+      { period: "", title: "Data Handling", detail: "NumPy, Pandas, scikit-learn" },
       {
         period: "",
-        title: "Machine Learning",
+        title: "Machine Learning & Deep Learning",
         detail:
-          "PyTorch, PyTorch Geometric, DGL, Hugging Face Transformers, scikit-learn, Pandas, NumPy",
+          "PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric (PyG), Deep Graph Library (DGL)",
       },
-      { period: "", title: "Cheminformatics", detail: "RDKit, DeepChem" },
+      {
+        period: "",
+        title: "Chemoinformatics & Bioinformatics",
+        detail: "RDKit, DeepChem, Biopython, Monocle, edgeR",
+      },
     ],
   },
   {
