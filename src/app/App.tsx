@@ -267,15 +267,20 @@ function VitaeEntry({ item }: { item: VitaeItem }) {
         {item.detail && (
           <p className="text-sm font-sans text-muted-foreground">{item.detail}</p>
         )}
-        {item.link && (
-          <a
-            href={item.link.href}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block mt-1 text-xs font-mono text-primary hover:underline underline-offset-2"
-          >
-            {item.link.label} ↗
-          </a>
+        {item.links && (
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            {item.links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="px-2 py-1 text-xs font-mono border border-border hover:bg-accent hover:text-white transition-colors rounded"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </div>

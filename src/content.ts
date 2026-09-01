@@ -170,7 +170,7 @@ export type VitaeItem = {
   period: string;
   title: string;
   detail: string;
-  link?: { label: string; href: string };
+  links?: { label: string; href: string }[];
 };
 export type VitaeSection =
   | { heading: string; items: VitaeItem[] }
@@ -238,10 +238,13 @@ export const VITAE: VitaeSection[] = [
         title: "Grand Prize (1st of 16 teams)",
         detail:
           "AI Service Weekly-thon, Smilegate Future Lab, Korea · Team Sweer, “Story Weaver” — an AI service that generates game quests and character art from user-supplied game elements",
-        link: {
-          label: "Announcement",
-          href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
-        },
+        links: [
+          {
+            label: "Announcement",
+            href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
+          },
+          { label: "Code", href: "https://github.com/mo-juhyeon/AIStoryWeaver" },
+        ],
       },
       {
         period: "2024",
