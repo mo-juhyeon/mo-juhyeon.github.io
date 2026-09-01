@@ -213,6 +213,8 @@ export type VitaeItem = {
   period: string;
   title: string;
   detail: string;
+  /** Shown above the title as a chip — used for award names. */
+  badge?: string;
   links?: { label: string; href: string }[];
 };
 export type VitaeSection =
@@ -284,18 +286,21 @@ export const VITAE: VitaeSection[] = [
     items: [
       {
         period: "2025",
-        title: "Best Paper Award, Undergraduate Division",
+        badge: "BEST PAPER AWARD",
+        title:
+          "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
         detail:
-          "Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers (KIISE), Korea",
+          "Undergraduate Division · Korea Computer Congress (KCC) 2025, Korean Institute of Information Scientists and Engineers (KIISE), Korea",
         links: [
           { label: "Certificate", href: drive("1GcobzciQs5A5paxltuP1uiGskujrh9e3") },
         ],
       },
       {
         period: "2024",
-        title: "Grand Prize (1st of 16 teams)",
+        badge: "GRAND PRIZE",
+        title: "Story Weaver — AI game quest and character art generator",
         detail:
-          "AI Service Weekly-thon, Smilegate Future Lab, Korea · Team Sweer, “Story Weaver” — an AI service that generates game quests and character art from user-supplied game elements",
+          "AI Service Weekly-thon, Smilegate Future Lab, Korea · 1st of 16 teams · Team Sweer",
         links: [
           {
             label: "Announcement",
@@ -306,9 +311,10 @@ export const VITAE: VitaeSection[] = [
       },
       {
         period: "2024",
-        title: "Encouragement Award, SNS Promotion Division",
+        badge: "ENCOURAGEMENT AWARD",
+        title: "SNS promotion for overseas ICT volunteering",
         detail:
-          "World Friends Korea ICT Volunteers, National Information Society Agency (NIA), Korea · Team FLY HAI",
+          "SNS Promotion Division · World Friends Korea ICT Volunteers, National Information Society Agency (NIA), Korea · Team FLY HAI",
         links: [
           { label: "Certificate", href: drive("1B7guWzCGqS57hh7oibFOkE3pLeFqXJQ1") },
         ],
