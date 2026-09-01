@@ -77,39 +77,38 @@ export const PUBLICATIONS: Publication[] = [
   {
     type: "paper",
     year: "2026",
-    // TODO: fill in the full co-author list in submission order.
-    authors: `${ME}, ..., Lim S.`,
+    authors: `${ME}, Lee M., Lee S., Lim S.`,
     title:
       "Cross-view molecular graph learning enables interpretable ADMET prediction",
     venue: "Bioinformatics",
     status: "Under editorial review · Sole first author",
     github: "https://github.com/sslim-aidrug/MAGNET",
-    // TODO: paste the manuscript abstract here.
-    abstract: "",
+    abstract:
+      "Motivation: Accurate and interpretable ADMET prediction remains challenging because molecular properties arise from structural features across multiple scales. We introduce MAGNET, a cross-view molecular graph learning framework that represents molecules as meta-graphs constructed from complementary BRICS, Junction Tree and Murcko scaffold decompositions. By connecting overlapping fragments across views, MAGNET enables message passing between chemically distinct but structurally related substructures. Multi-objective pre-training further aligns graph representations with molecular descriptors and chemical language model embeddings. " +
+      "Results: Across 10 ADMET benchmarks, MAGNET achieved the best performance on seven tasks and the strongest overall rank against fifteen baseline models. MAGNET also identifies cross-view consensus fragments that receive enriched attention, dominate perturbation-based attribution, and recover known structure–activity relationships, permeability determinants, BACE substituent effects and polarity-dependent solvation behavior. These results establish cross-view consensus as a practical principle for interpretable molecular representation learning.",
   },
   {
     type: "conference",
     year: "2025",
-    // TODO: fill in the full co-author list.
-    authors: `${ME}, ..., Lim S.`,
+    authors: `${ME}, Lee Y., Lee M., Lim S.`,
     title:
       "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
     venue:
-      "Korea Computer Congress (KCC) 2025, Korean Institute of Information Scientists and Engineers (KIISE), Korea",
+      "Undergraduate/Junior Paper Competition, Korea Computer Congress (KCC) 2025, Korean Institute of Information Scientists and Engineers (KIISE), Korea",
     status: "Co-first author",
     award: "BEST PAPER AWARD",
     awardDetail:
-      "Best Paper Award, Undergraduate Division, Korea Computer Congress (KCC) 2025.",
+      "Best Paper Award, Undergraduate Division, Undergraduate/Junior Paper Competition, Korea Computer Congress (KCC) 2025 (awarded Jul 30, 2025).",
     github: "https://github.com/sslim-aidrug/MAGNET",
   },
   {
     type: "registration",
     year: "2025",
-    authors: `${ME}, ..., Lim S.`,
+    authors: `Lim S., ${ME}, Lee Y., Lee M.`,
     title:
       "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies",
-    // TODO: add the registration number (프로그램등록번호).
-    venue: "Software Program Registration, Korea Copyright Commission · Approved",
+    venue:
+      "Software Registration No. C-2025-040207, Korea Copyright Commission · Registered Oct 1, 2025",
   },
 ];
 
@@ -257,8 +256,7 @@ export const VITAE: VitaeSection[] = [
     items: [
       {
         period: "2025",
-        // TODO: add the registration number.
-        title: "Software Program Registration (approved)",
+        title: "Software Registration No. C-2025-040207",
         detail:
           "Multi-view Aggregation of Chemical Graphs for Neural Embedding of Topologies, Korea Copyright Commission",
       },
