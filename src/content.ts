@@ -91,7 +91,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     type: "paper",
     year: "2026",
-    // TODO: add the author list once it is settled.
+    authors: `Lee M., ${ME}, Kang M., Lim S.`,
     title:
       "SJoINT: Substructure-Driven Junction Tree for Interpretable ADMET Prediction",
     venue: "Manuscript in preparation",
