@@ -154,7 +154,6 @@ function PublicationRow({ pub }: { pub: Publication }) {
 
         <div className="tagrow">
           {pub.award && <span className="badge">{pub.award}</span>}
-          {pub.type === "registration" && <span className="badge">SW REG.</span>}
           <ChipLinks links={pub.links} />
           {hasDetails && (
             <button className="chip-btn" onClick={() => setOpen((o) => !o)}>
