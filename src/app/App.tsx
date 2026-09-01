@@ -8,6 +8,7 @@ import {
   VITAE,
   ME,
   type Publication,
+  type VitaeItem,
   type NewsItem,
 } from "@/content";
 
@@ -257,6 +258,30 @@ function PublicationsSection({
   );
 }
 
+function VitaeEntry({ item }: { item: VitaeItem }) {
+  return (
+    <div className="grid grid-cols-[8rem_1fr] gap-4 border-t border-border py-3">
+      <span className="font-mono text-xs text-muted-foreground pt-0.5">{item.period}</span>
+      <div>
+        <p className="text-base font-sans font-medium text-foreground leading-snug">{item.title}</p>
+        {item.detail && (
+          <p className="text-sm font-sans text-muted-foreground">{item.detail}</p>
+        )}
+        {item.link && (
+          <a
+            href={item.link.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-1 text-xs font-mono text-primary hover:underline underline-offset-2"
+          >
+            {item.link.label} ↗
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function VitaeSection() {
   return (
     <div className="space-y-10">
@@ -288,22 +313,7 @@ function VitaeSection() {
                     {sub.subheading}
                   </p>
                   {sub.items.map((item, i) => (
-                    <div
-                      key={i}
-                      className="grid grid-cols-[8rem_1fr] gap-4 border-t border-border py-3"
-                    >
-                      <span className="font-mono text-xs text-muted-foreground pt-0.5">
-                        {item.period}
-                      </span>
-                      <div>
-                        <p className="text-base font-sans font-medium text-foreground leading-snug">
-                          {item.title}
-                        </p>
-                        {item.detail && (
-                          <p className="text-sm font-sans text-muted-foreground">{item.detail}</p>
-                        )}
-                      </div>
-                    </div>
+                    <VitaeEntry key={i} item={item} />
                   ))}
                 </div>
               ))}
@@ -311,22 +321,7 @@ function VitaeSection() {
           ) : (
             <div className="space-y-0">
               {sec.items.map((item, i) => (
-                <div
-                  key={i}
-                  className="grid grid-cols-[8rem_1fr] gap-4 border-t border-border py-3"
-                >
-                  <span className="font-mono text-xs text-muted-foreground pt-0.5">
-                    {item.period}
-                  </span>
-                  <div>
-                    <p className="text-base font-sans font-medium text-foreground leading-snug">
-                      {item.title}
-                    </p>
-                    {item.detail && (
-                      <p className="text-sm font-sans text-muted-foreground">{item.detail}</p>
-                    )}
-                  </div>
-                </div>
+                <VitaeEntry key={i} item={item} />
               ))}
             </div>
           )}

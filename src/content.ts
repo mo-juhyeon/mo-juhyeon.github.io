@@ -154,11 +154,24 @@ export const NEWS: NewsItem[] = [
     date: "Aug 23, 2024",
     text: "🔬 Began my research journey at PRISM Lab, Dongguk University.",
   },
+  {
+    date: "Jul 27, 2024",
+    text: "🏆 Our team won the Grand Prize at the Smilegate AI Service Weekly-thon with “Story Weaver”, an AI game quest generator.",
+    link: {
+      label: "Smilegate AI Service Weekly-thon",
+      href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
+    },
+  },
 ];
 
 // ----------------------------------------------------------------- vitae
 
-export type VitaeItem = { period: string; title: string; detail: string };
+export type VitaeItem = {
+  period: string;
+  title: string;
+  detail: string;
+  link?: { label: string; href: string };
+};
 export type VitaeSection =
   | { heading: string; items: VitaeItem[] }
   | {
@@ -222,8 +235,13 @@ export const VITAE: VitaeSection[] = [
       },
       {
         period: "2024",
-        title: "Grand Prize",
-        detail: "AI Service Weekly-thon, Smilegate AI, Korea",
+        title: "Grand Prize (1st of 16 teams)",
+        detail:
+          "AI Service Weekly-thon, Smilegate Future Lab, Korea · Team Sweer, “Story Weaver” — an AI service that generates game quests and character art from user-supplied game elements",
+        link: {
+          label: "Announcement",
+          href: "https://newsroom.smilegate.com/lab/2024AIweeklyton",
+        },
       },
       {
         period: "2024",
