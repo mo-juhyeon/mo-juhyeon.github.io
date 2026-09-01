@@ -268,8 +268,7 @@ export const VITAE: VitaeSection[] = [
     heading: "Certifications",
     items: [
       {
-        // TODO: add the year the badge was issued.
-        period: "",
+        period: "2024",
         title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
         detail: "Microsoft",
         links: [
