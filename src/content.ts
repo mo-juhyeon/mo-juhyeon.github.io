@@ -96,11 +96,9 @@ export const PUBLICATIONS: Publication[] = [
       "Cross-view molecular graph learning enables interpretable ADMET prediction",
     venue: "Bioinformatics",
     status: "Under editorial review · Sole first author",
-    links: [
-      { label: "PDF", href: drive("14_F8Qwds56z4IypPNg8GepRD24KA0SOt") },
-      { label: "Supplementary", href: drive("1Jq_iEfOPuus_eim10bTePfJuX-rAqW99") },
-      { label: "GitHub", href: "https://github.com/sslim-aidrug/MAGNET" },
-    ],
+    // The full manuscript stays offline until a preprint is posted; the
+    // corresponding author decides that.
+    links: [{ label: "GitHub", href: "https://github.com/sslim-aidrug/MAGNET" }],
     abstract:
       "Motivation: Accurate and interpretable ADMET prediction remains challenging because molecular properties arise from structural features across multiple scales. We introduce MAGNET, a cross-view molecular graph learning framework that represents molecules as meta-graphs constructed from complementary BRICS, Junction Tree and Murcko scaffold decompositions. By connecting overlapping fragments across views, MAGNET enables message passing between chemically distinct but structurally related substructures. Multi-objective pre-training further aligns graph representations with molecular descriptors and chemical language model embeddings. " +
       "Results: Across 10 ADMET benchmarks, MAGNET achieved the best performance on seven tasks and the strongest overall rank against fifteen baseline models. MAGNET also identifies cross-view consensus fragments that receive enriched attention, dominate perturbation-based attribution, and recover known structure–activity relationships, permeability determinants, BACE substituent effects and polarity-dependent solvation behavior. These results establish cross-view consensus as a practical principle for interpretable molecular representation learning.",
